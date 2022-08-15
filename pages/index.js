@@ -1,23 +1,22 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+import Head from "next/head";
+import Header from "@components/Header";
+import Footer from "@components/Footer";
+import constants from "constants/constants";
 
 export default function Home() {
+  const title = "Challenge " + constants.year
   return (
     <div className="container">
       <Head>
-        <title>Next.js Starter!</title>
+        <title>Challenge {constants.year}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <Header title={title} />
       </main>
 
       <Footer />
     </div>
-  )
+  );
 }
